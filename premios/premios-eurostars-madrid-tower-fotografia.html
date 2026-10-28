@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<!-- origen: https://www.roomzero.es/eurostarscultura/premios/eurostars-madrid-tower-fotografia?id=114049 -->
+<html lang="es" class="es "><head>
+  <title>Eurostars Cultura Testing</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="robots" content="index,follow">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="">
+  <link rel="canonical" href="https://www.roomzero.es/eurostarscultura/premios/eurostars-madrid-tower-fotografia">
+  <link rel="shortcut icon" href="https://www.roomzero.es/CLIENTES/www.eurostarshotels.com/images/cultura/favicon.ico" type="image/x-icon">
+  <style>
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    cursor: none;
+  }
+
+  :root {
+    --body:#4A453E;
+    --cream: #f5f0e8;
+    --ink: #1a1714;
+    --gold: #b8965a;
+    --goldtitle:#5C4B2D;
+    --muted: #6b6358;
+    --border: rgba(26, 23, 20, 0.12);
+    --white:#ffffff;
+    --ff-display: 'Cormorant Garamond', Georgia, serif;
+    --ff-body: 'Archivo', sans-serif;
+    --px: clamp(1.25rem, 5vw, 3rem);
+    --maxw:1320px;
+    --gutter:clamp(24px,5vw,72px);
+    --line:rgba(31,28,24,0.12);
+    --img-bg:#E6DFD3;
+  }
+  /* Estándar (Firefox) */
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) #00000000;
+  }
+
+  /* Webkit (Chrome, Edge, Safari) */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 99px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--white);
+    color: var(--ink);
+    font-family: var(--ff-body);
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+  /* ── NAV ── */
+  #mainNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem var(--px);
+  }
+
+  .nav-logo {
+    font-family: var(--ff-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0;
+  }
+  .nav-logo svg{
+    width: 130px;
+  } 
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.75rem;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    position: relative;
+    opacity: 0;
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.4s ease;
+  }
+  .nav-links a::before {
+    position: absolute;
+    content: '';
+    inset:-20px;
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Hamburger – hidden on desktop */
+  .nav-burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    opacity: 1;
+  }
+
+  .nav-burger span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--ink);
+    transition: transform 0.3s, opacity 0.3s;
+    transform-origin: center;
+  }
+
+  .nav-burger.open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .nav-burger.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-burger.open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--cream);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-drawer.visible {
+    transform: translateY(0);
+  }
+
+  .nav-drawer a {
+    font-family: var(--ff-display);
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: var(--ink);
+    text-decoration: none;
+    opacity: 0;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+    overflow: hidden;
+  }
+
+  .hero-cell {
+    overflow: hidden;
+    position: relative;
+  }
+
+  .hero-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.08);
+    filter: saturate(0.85);
+    transition: filter 0.6s ease;
+  }
+
+  .hero-cell:hover img {
+    filter: saturate(1);
+  }
+
+  .hero-cell.hero-main {
+    grid-column: 1;
+    grid-row: 1 / 3;
+  }
+
+  .hero-title-block {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem var(--px) 5rem;
+    background: var(--white);
+  }
+
+  .hero-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  .hero-eyebrow span {
+    display: block;
+  }
+
+  .hero-h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.6rem, 4.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+    overflow: hidden;
+  }
+
+  .hero-h1 span {
+    display: block;
+  }
+
+  .hero-h1 em {
+    font-style: italic;
+  }
+
+  /* ── MISSION ── */
+  .mission {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 80vh;
+  }
+
+  .mission-left {
+    padding: 7rem var(--px) 7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-number {
+    font-family: var(--ff-display);
+    font-size: 1rem;
+    letter-spacing: 0.25em;
+    color: var(--goldtitle);
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .section-number span {
+    display: block;
+  }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--body);
+    margin-bottom: 1.5rem;
+  }
+
+  .mission-title {
+    font-family: var(--ff-display);
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-bottom: 2rem;
+    overflow: hidden;
+  }
+
+  .mission-title span {
+    display: block;
+  }
+
+  .mission-body {
+    font-size: 0.88rem;
+    line-height: 1.85;
+    color: var(--muted);
+    max-width: 48ch;
+  }
+
+  .mission-body p+p {
+    margin-top: 1.25rem;
+  }
+
+  .mission-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 3px;
+  }
+
+  .mission-img {
+    overflow: hidden;
+  }
+
+  .mission-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.06);
+  }
+
+  .mission-img:first-child {
+    grid-column: 1 / 3;
+  }
+
+  /* ── SECTIONS GRID ── */
+  .sections-intro {
+    padding: 5rem var(--px) 2.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 2rem;
+  }
+
+  .sections-intro-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .sections-intro-line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .sections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--border);
+    counter-reset: items
+  }
+
+  .section-card {
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    overflow: hidden;
+    cursor: pointer;
+    counter-increment: items
+  }
+
+  .section-card:last-child {
+    border-right: none;
+  }
+
+  .section-card-img {
+    overflow: hidden;
+    height: 280px;
+  }
+
+  .section-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.08);
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  .section-card:hover .section-card-img img {
+    transform: scale(1);
+  }
+
+  .section-card-body {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .section-card-number {
+    font-family: var(--ff-display);
+    font-size: 1rem;
+    letter-spacing: 0.2em;
+    color: var(--goldtitle);
+    margin-bottom: 1rem;
+  }
+
+  .section-card-title {
+    font-family: var(--ff-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .section-card-title:before {
+    content: '0' counter(items) ' ── ';
+  }
+
+  .section-card-desc {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+
+  .section-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.75rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 2em 0;
+  }
+
+  .cta-arrow {
+    width: 32px;
+    height: 1px;
+    background: var(--gold);
+    position: relative;
+    transition: width 0.4s ease;
+  }
+
+  .cta-arrow::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -3px;
+    width: 7px;
+    height: 7px;
+    border-top: 1px solid var(--gold);
+    border-right: 1px solid var(--gold);
+    transform: rotate(45deg);
+  }
+
+  .section-card-cta:hover .cta-arrow {
+    width: 48px;
+  }
+
+  /* ── EXPOSICIONES ── */
+  .exposiciones {
+    padding: 7rem var(--px);
+    border-top: 1px solid var(--border);
+  }
+
+  .expo-header {
+    margin-bottom: 4rem;
+  }
+
+  .expo-title {
+    font-family: var(--ff-display);
+    font-size: clamp(2rem, 3.5vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.1;
+    overflow: hidden;
+  }
+
+  .expo-title span {
+    display: block;
+  }
+
+  .expo-list {
+    list-style: none;
+  }
+  .expo-list a{
+    text-decoration: none;
+    color: inherit;
+  }
+  .expo-item {
+    border-top: 1px solid var(--border);
+    padding: 1.75rem 0.5rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr auto;
+    gap: 1.5rem;
+    align-items: start;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .expo-item:last-child {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .expo-item:hover {
+    background: rgba(26, 23, 20, 0.03);
+  }
+
+  .expo-idx {
+    font-family: var(--ff-display);
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    padding-top: 0.2rem;
+  }
+
+  .expo-info-title {
+    font-family: var(--ff-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+
+  .expo-info-meta {
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .expo-arrow {
+    width: 28px;
+    height: 28px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+    transition: background 0.3s, border-color 0.3s;
+  }
+
+  .expo-item:hover .expo-arrow {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+
+  .expo-arrow svg {
+    width: 12px;
+    height: 12px;
+    transition: stroke 0.3s;
+  }
+
+  .expo-item:hover .expo-arrow svg {
+    stroke: white;
+  }
+
+  .expo-list {
+    counter-reset: items
+  }
+
+  .expo-item {
+    counter-increment: items
+  }
+
+  .expo-idx:before {
+    content: '0' counter(items)
+  }
+
+  /* ── FOOTER ── */
+  #footer-ec {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 5rem var(--px) 3rem;
+  }
+
+  .footer-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(245, 240, 232, 0.1);
+  }
+
+  .footer-brand {
+    font-family: var(--ff-display);
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.3;
+  }
+
+  .footer-col-title {
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+  }
+
+  .footer-links {
+    list-style: none;
+  }
+
+  .footer-links li+li {
+    margin-top: 0.75rem;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+    color: rgba(245, 240, 232, 0.55);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .footer-links a:hover {
+    color: var(--cream);
+  }
+
+  .footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .social-btn {
+    width: 34px;
+    height: 34px;
+    border: 1px solid rgba(245, 240, 232, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: border-color 0.3s, background 0.3s;
+  }
+
+  .social-btn:hover {
+    border-color: var(--gold);
+    background: rgba(184, 150, 90, 0.15);
+  }
+
+  .social-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke: rgba(245, 240, 232, 0.6);
+    fill: none;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    font-size: 0.72rem;
+    color: rgba(245, 240, 232, 0.55);
+  }
+
+  /* Cursor */
+  .cursor-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+  }
+
+  .cursor-ring {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid var(--gold);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  /* ════════════════════════════════
+     TABLET  ≤ 900px
+  ════════════════════════════════ */
+  @media (max-width: 900px) {
+
+    /* Hero: stack title over image */
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      min-height: auto;
+    }
+
+    .hero-cell.hero-main {
+      grid-column: 1 / 3;
+      grid-row: 1;
+      height: 50vw;
+      min-height: 280px;
+    }
+
+    .hero-title-block {
+      grid-column: 1 / 3;
+      grid-row: 2;
+      padding: 5rem var(--px) 3rem;
+    }
+
+    /* hide the two bottom hero images on tablet */
+    .hero>.hero-cell:not(.hero-main) {
+      display: none;
+    }
+
+    /* Mission: stack */
+    .mission {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+
+    .mission-left {
+      border-right: none;
+      padding: 4rem var(--px);
+    }
+
+    .mission-right {
+      height: 60vw;
+      min-height: 260px;
+    }
+
+    .mission-img:first-child {
+      grid-column: 1 / 3;
+    }
+
+    /* Sections: 2 cols */
+    .sections-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .section-card:nth-child(2) {
+      border-right: none;
+    }
+
+    .section-card:nth-child(3) {
+      grid-column: 1 / 3;
+      border-right: none;
+    }
+
+    /* Footer: 2 col */
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  /* ════════════════════════════════
+     DESK  >= 1024px
+  ════════════════════════════════ */
+  @media (max-width: 1024px) {
+
+    /* Nav: show burger, hide links */
+    .nav-links {
+      display: none;
+    }
+
+    .nav-burger {
+      display: flex;
+    }
+
+    .nav-drawer {
+      display: flex;
+    }
+
+    /* Hero full-width single image */
+    .hero {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .hero-cell.hero-main {
+      grid-column: 1;
+      height: 70vw;
+      min-height: 240px;
+    }
+
+    .hero-title-block {
+      grid-column: 1;
+      padding: 4.5rem var(--px) 2.5rem;
+    }
+
+    /* Mission */
+    .mission-right {
+      height: 80vw;
+    }
+
+    .mission-body {
+      max-width: 100%;
+    }
+
+    /* Sections: single col */
+    .sections-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .section-card {
+      border-right: none;
+    }
+
+    .section-card:nth-child(3) {
+      grid-column: 1;
+    }
+
+    .section-card-img {
+      height: 56vw;
+    }
+
+    /* Exposiciones list: hide index on very small */
+    .expo-idx {
+      display: none;
+    }
+
+    .expo-item {
+      grid-template-columns: 1fr auto;
+    }
+
+    /* Footer: single col */
+    .footer-top {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      gap: 0.5rem;
+      text-align: center;
+    }
+  }
+
+  #hero-gallery {
+    overflow: visible !important;
+  }
+
+  .horiz-gallery-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .horiz-gallery-strip {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    will-change: transform;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .project-wrap {
+    width: 45vw;
+    flex-shrink: 0;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .project-wrap img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  @media (max-width: 600px) {
+    .project-wrap {
+      width: 66vw;
+      padding: 1rem;
+    }
+
+    .horiz-gallery-wrapper {
+      height: 70vh;
+    }
+  }
+/* HERO-LANDING */
+  .hero-landing{
+    max-width:var(--maxw);margin:0 auto;
+    padding:clamp(140px,18vh,200px) var(--gutter) clamp(60px,9vh,110px);
+  }
+  .hero-landing-eyebrow{
+    font-family:var(--ff-body);font-size:12.5px;font-weight:400;
+    letter-spacing:0.2em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:28px;
+  }
+  .hero-landing-title{
+    font-family:var(--ff-display);font-weight:300;
+    font-size:clamp(48px,8vw,108px);line-height:0.98;
+    letter-spacing:-0.01em;color:var(--ink);max-width:14ch;
+  }
+  .hero-landing-title em{font-style:italic;font-weight:400;}
+  .hero-landing-intro{
+    font-family:var(--ff-body);font-weight:300;
+    font-size:clamp(16px,1.4vw,19px);line-height:1.7;
+    color:var(--body);max-width:48ch;margin-top:36px;
+  }
+  .hero-landing.notifications .hero-landing-intro{
+    max-width: none;
+  }
+/* PROGRAM-LANDING SECTIONS */
+  .program-landing{
+    scroll-margin-top:96px;
+    max-width:var(--maxw);margin:0 auto;
+    padding:clamp(48px,7vh,90px) var(--gutter);
+    border-top:1px solid var(--line);
+    display:grid;grid-template-columns:1.05fr 0.95fr;
+    gap:clamp(40px,6vw,96px);align-items:center;
+  }
+  .program-landing:nth-of-type(even){grid-template-columns:0.95fr 1.05fr;}
+  .program-landing:nth-of-type(even) .program-landing-figure{order:-1;}
+
+  .program-landing-number{
+    font-family:var(--ff-body);font-size:12.5px;font-weight:400;
+    letter-spacing:0.16em;text-transform:uppercase;
+    color:var(--muted);margin-bottom:24px;
+  }
+  .program-landing-title{
+    font-family:var(--ff-display);font-weight:300;
+    font-size:clamp(36px,5vw,68px);line-height:1.02;
+    letter-spacing:-0.01em;color:var(--ink);margin-bottom:28px;
+  }
+  .program-landing-title em{font-style:italic;font-weight:400;}
+  .program-landing-desc{
+    font-family:var(--ff-display);font-weight:300;font-size:17px;
+    line-height:1.75;color:var(--body);max-width:44ch;
+  }
+  .program-landing-figure{
+    margin:0;overflow:hidden;aspect-ratio:4/5;visibility: hidden;position: relative;
+  }
+  .program-landing-img{width:100%;height:100%;object-fit:cover;}
+/* SCROLL REVEAL */
+  .program-landing.reveal{
+    opacity:0;transform:translateY(28px);
+    transition:opacity .9s ease,transform .9s cubic-bezier(.22,.61,.36,1);
+  }
+  .program-landing.reveal.is-visible{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){
+    .program-landing.reveal{opacity:1;transform:none;transition:none;}
+  }
+  @media(max-width:760px){
+    .program-landing{grid-template-columns:1fr;}
+    .program-landing:nth-of-type(even) .program-landing-figure{order:0;}
+  }
+/* LANDING PRODUCTO */
+  .exhibit{
+    max-width:1180px;margin:0 auto;
+    padding:clamp(120px,16vh,180px) var(--gutter) clamp(60px,8vh,100px);
+  }
+
+  .exhibit-title{
+    font-family:var(--ff-display);font-style:italic;font-weight:400;
+    font-size:clamp(30px,3.6vw,46px);line-height:1.18;
+    letter-spacing:-0.005em;color:var(--ink);text-align:center;
+    text-wrap:balance;margin:0 auto clamp(40px,6vh,72px);
+  }
+
+  .exhibit-hero{
+    display:block;width:100%;margin:0 auto;
+    background:var(--img-bg);
+  }
+  .exhibit-hero img{width:100%;height:auto;display:block;}
+
+  .exhibit-body{
+    max-width:700px;margin:clamp(40px,6vh,72px) auto 0;
+    font-family:var(--ff-body);font-weight:400;font-size:15px;
+    line-height:1.62;color:#5A554D;
+  }
+  .exhibit-body p{margin-bottom:1.5em;}
+  .exhibit-body p:last-child{margin-bottom:0;}
+  .exhibit-body strong{font-weight:600;color:var(--ink);}
+
+  .exhibit-figure{
+    display:block;width:100%;max-width:430px;margin:clamp(48px,7vh,88px) auto 50px;
+    background:var(--img-bg);
+  }
+  .exhibit-figure img{width:100%;height:auto;display:block;}
+  .exhibit-related-figure{overflow: hidden;}
+  .exhibit-related-figure img:hover{transform: scale(1.3);object-position: 50% 0%;}
+  .exhibit-related-slide{text-decoration:none;color:var(--body);font-size:15px}
+  .exhibit-related-slide .exhibit-title{font-size:26px;margin:18px 0;text-align:left;}
+/*slide bottom landing detail*/
+  .swiper {
+    width: 100%;
+    padding: 50px 0;
+  }
+
+  .swiper-slide {
+    position: relative;
+    width: 200px;
+    height: 500px;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: 1s;
+  }
+
+  .hidden {
+    display: none;
+  }
+/*arrows swiper*/
+.slides-nav__prev,
+.slides-nav__next {
+  position: relative;
+  display: inline-block;
+  padding:1em 0.35em;
+  margin: 0;
+  font-family: var(--ff-display);
+  font-size: 25px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: transparent;
+  border: 0;
+  overflow-x: hidden;
+  transition: color 0.5s ease;
+}
+.slides-nav__prev:after,
+.slides-nav__next:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: var(--gold) !important;
+  transition: width 0.4s ease;
+}
+.slides-nav__prev:hover,
+.slides-nav__next:hover {
+  cursor: pointer;
+  transition: color 0.5s ease;
+}
+.slides-nav__prev:hover:after,
+.slides-nav__next:hover:after {
+  width: 100%;
+  transition: width 0.4s ease;
+}
+.slides-nav__prev:focus,
+.slides-nav__next:focus {
+  outline: 0;
+}
+.slides-nav__prev.swiper-button-disabled,
+.slides-nav__next.swiper-button-disabled{
+  pointer-events: none;
+}
+
+</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&amp;family=Roboto:ital,wght@0,100..900;1,100..900&amp;family=Archivo:wght@300;400;500&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.roomzero.es/js/libraries/swiper/swiper-bundle.min.css">
+  <script src="https://www.roomzero.es/js/libraries/swiper/swiper-bundle.min.js"></script>
+  
+  
+  </head><body><div style="display: none;">
+  <div class="logo"><svg role="img" aria-label="Eurostars Hotel Company" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 253.8 63.5">  <g>    <g>      <path d="M10.9,32.1h16.9v-1.9H11.1v-13.7h13.1v-1.9h-13.1V2.1h16.7V.2H0c0,.3.1.6.4.8.2.2,1.4.8,1.8,1.4.2.2.6,1,.6,2h0v27.8h8.2Z"></path>      <path d="M45.5,32.3c7.8,0,12-4.4,12-11.5V.4h-2.3v19.9c0,4.7-1.9,8.8-7.5,8.8s-7.7-4.1-7.7-8.8V.4h-6.5v20.4c0,7.1,4.1,11.5,12,11.5h0Z"></path>      <path d="M79.4,17.3c4.6-1.1,7.6-3.7,7.6-8.1S81.6.4,74.1.4h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6ZM72.8,16h-2.2V2.3h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M123.3,16.2C123.3,6.4,117.1,0,107.7,0s-15.6,6.3-15.6,16.2,6.1,16.2,15.6,16.2,15.6-6.4,15.6-16.2ZM99.2,16.1c0-9,2.6-14.3,8.6-14.3s8.5,5.4,8.5,14.4-2.6,14.4-8.5,14.4-8.6-5-8.6-14.5Z"></path>      <path d="M147.9,23c0-11-14.5-9.9-14.5-16.6s2.4-4.5,5.2-4.5,5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4h0Z"></path>      <polygon points="172.8 .4 150.2 .4 150.2 2.3 158.4 2.3 158.4 31.9 165.1 31.9 165.1 2.3 172.8 2.3 172.8 .4"></polygon>      <path d="M182.8.4l-11.3,31.5h2.2l3.4-9.4h12.7l3,9.5h6.8L189.6.4h-6.8ZM177.8,20.6l6-16.8,5.4,16.8h-11.4Z"></path>      <path d="M228.2,9.2c0-6.1-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6c4.6-1.1,7.6-3.7,7.6-8.1ZM214.1,16h-2.2V2.3h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M239.3,6.4c0-3.1,2.4-4.5,5.2-4.5s5,.8,7,2.6l.9-.8C250.5,1.8,248.2,0,244.1,0,237.5,0,233.9,3.3,233.9,8.3c0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4c0-11-14.5-9.9-14.5-16.6h0Z"></path>      <polygon points="12.5 53.3 5.8 53.3 5.8 46.5 2.9 46.5 2.9 63.3 5.8 63.3 5.8 55.8 12.5 55.8 12.5 63.3 15.5 63.3 15.5 46.5 12.5 46.5 12.5 53.3"></polygon>      <path d="M26.7,46.3c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM26.6,61.1c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <polygon points="35.4 49 40.1 49 40.1 63.3 43.1 63.3 43.1 49 47.8 49 47.8 46.5 35.4 46.5 35.4 49"></polygon>      <polygon points="53.5 55.8 60.8 55.8 60.8 53.3 53.5 53.3 53.5 49 61.1 49 61.1 46.5 50.6 46.5 50.6 63.3 61.2 63.3 61.6 60.8 53.5 60.8 53.5 55.8"></polygon>      <polygon points="67.7 46.5 64.7 46.5 64.7 63.3 75 63.3 75.4 60.8 67.7 60.8 67.7 46.5"></polygon>      <path d="M89.4,61.1c-3.1,0-4.1-3-4.1-6.3s1.1-6.2,4-6.2,3.1,1.4,3.5,3h2.9c-.2-2.7-2-5.4-6.3-5.4s-7.2,3.9-7.2,8.6,1.9,8.7,7,8.7,6-2.6,6.5-5.4h-2.9c-.4,1.5-1.2,3-3.5,3Z"></path>      <path d="M106.1,46.3c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM106,61.1c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <path d="M125,59.4h0c-.5-2.5-2.3-8.6-3.6-12.9h-4.4v16.7h2.7v-6.2c0-2.9,0-6.5-.2-8.5h.1c.7,3.3,2.8,10.7,3.9,14.7h2.6c1.6-4.8,3.6-11.4,4.3-14.7h.1c0,1.8-.1,5.2-.1,8.1v6.5h2.9v-16.7h-4.3c-1.4,4.3-3.6,10.9-4,12.9h0Z"></path>      <path d="M143.8,46.5h-6v16.7h3v-6.7h2.7c3.6,0,6-1.7,6-5.2s-2.6-4.9-5.7-4.9h0ZM143.3,54.2h-2.6v-5.3h2.6c1.8,0,3.1.8,3.1,2.6s-1.2,2.7-3.2,2.7Z"></path>      <path d="M155,46.5c-.6,1.8-4.7,15.1-5.2,16.7h2.9l1.3-4.4h5.7l1.4,4.4h3.1l-5.5-16.7s-3.8,0-3.8,0ZM154.6,56.4c1-3.1,1.8-5.7,2.2-7.6h0c.4,1.5,1.1,3.9,2.3,7.6h-4.5,0Z"></path>      <path d="M177.4,52.2c0,2.7,0,5.5.2,7.5h0c-.3-.8-1.1-2.4-6.7-13.2h-3.8v16.7h2.7v-5.7c0-3,0-5.9-.1-8h0c.3.7.9,1.9,6.8,13.7h3.6v-16.7h-2.7v5.7h0Z"></path>      <path d="M189.6,54.1c-.7-1.5-2.5-5-3.8-7.5h-3.3l5.4,9.8c.1.2.1.3.1.5v6.4h2.9v-6.5c0-.2,0-.3.1-.5l5.4-9.8h-3.1c-1.2,2.4-2.6,5.2-3.8,7.5h0Z"></path>    </g>  </g>  <g>    <g>      <path d="M10.9-60.6h16.9v-1.9H11.1v-13.7h13.1v-1.9h-13.1v-12.6h16.7v-1.9H0c0,.3.1.6.4.8.2.2,1.4.8,1.8,1.4.2.2.6,1,.6,2h0v27.8h8.2Z"></path>      <path d="M45.5-60.4c7.8,0,12-4.4,12-11.5v-20.4h-2.3v19.9c0,4.7-1.9,8.8-7.5,8.8s-7.7-4.1-7.7-8.8v-19.9h-6.5v20.4c0,7.1,4.1,11.5,12,11.5h0Z"></path>      <path d="M79.4-75.4c4.6-1.1,7.6-3.7,7.6-8.1s-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6ZM72.8-76.7h-2.2v-13.8h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M123.3-76.5c0-9.8-6.2-16.2-15.6-16.2s-15.6,6.3-15.6,16.2,6.1,16.2,15.6,16.2,15.6-6.4,15.6-16.2ZM99.2-76.6c0-9,2.6-14.3,8.6-14.3s8.5,5.4,8.5,14.4-2.6,14.4-8.5,14.4-8.6-5-8.6-14.5Z"></path>      <path d="M147.9-69.7c0-11-14.5-9.9-14.5-16.6s2.4-4.5,5.2-4.5,5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4h0Z"></path>      <polygon points="172.8 -92.3 150.2 -92.3 150.2 -90.5 158.4 -90.5 158.4 -60.8 165.1 -60.8 165.1 -90.5 172.8 -90.5 172.8 -92.3"></polygon>      <path d="M182.8-92.3l-11.3,31.5h2.2l3.4-9.4h12.7l3,9.5h6.8l-10.1-31.5h-6.8ZM177.8-72.2l6-16.8,5.4,16.8h-11.4Z"></path>      <path d="M228.2-83.5c0-6.1-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6c4.6-1.1,7.6-3.7,7.6-8.1ZM214.1-76.7h-2.2v-13.8h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M239.3-86.3c0-3.1,2.4-4.5,5.2-4.5s5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4c0-11-14.5-9.9-14.5-16.6h0Z"></path>      <polygon points="12.5 -39.5 5.8 -39.5 5.8 -46.2 2.9 -46.2 2.9 -29.5 5.8 -29.5 5.8 -37 12.5 -37 12.5 -29.5 15.5 -29.5 15.5 -46.2 12.5 -46.2 12.5 -39.5"></polygon>      <path d="M26.7-46.5c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM26.6-31.6c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <polygon points="35.4 -43.8 40.1 -43.8 40.1 -29.5 43.1 -29.5 43.1 -43.8 47.8 -43.8 47.8 -46.2 35.4 -46.2 35.4 -43.8"></polygon>      <polygon points="53.5 -37 60.8 -37 60.8 -39.5 53.5 -39.5 53.5 -43.8 61.1 -43.8 61.1 -46.2 50.6 -46.2 50.6 -29.5 61.2 -29.5 61.6 -31.9 53.5 -31.9 53.5 -37"></polygon>      <polygon points="67.7 -46.2 64.7 -46.2 64.7 -29.5 75 -29.5 75.4 -31.9 67.7 -31.9 67.7 -46.2"></polygon>      <path d="M89.4-31.6c-3.1,0-4.1-3-4.1-6.3s1.1-6.2,4-6.2,3.1,1.4,3.5,3h2.9c-.2-2.7-2-5.4-6.3-5.4s-7.2,3.9-7.2,8.6,1.9,8.7,7,8.7,6-2.6,6.5-5.4h-2.9c-.4,1.5-1.2,3-3.5,3Z"></path>      <path d="M106.1-46.5c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM106-31.6c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <path d="M125-33.3h0c-.5-2.5-2.3-8.6-3.6-12.9h-4.4v16.7h2.7v-6.2c0-2.9,0-6.5-.2-8.5h.1c.7,3.3,2.8,10.7,3.9,14.7h2.6c1.6-4.8,3.6-11.4,4.3-14.7h.1c0,1.8-.1,5.2-.1,8.1v6.5h2.9v-16.7h-4.3c-1.4,4.3-3.6,10.9-4,12.9h0Z"></path>      <path d="M143.8-46.2h-6v16.7h3v-6.7h2.7c3.6,0,6-1.7,6-5.2s-2.6-4.9-5.7-4.9h0ZM143.3-38.6h-2.6v-5.3h2.6c1.8,0,3.1.8,3.1,2.6s-1.2,2.7-3.2,2.7Z"></path>      <path d="M155-46.2c-.6,1.8-4.7,15.1-5.2,16.7h2.9l1.3-4.4h5.7l1.4,4.4h3.1l-5.5-16.7s-3.8,0-3.8,0ZM154.6-36.3c1-3.1,1.8-5.7,2.2-7.6h0c.4,1.5,1.1,3.9,2.3,7.6h-4.5,0Z"></path>      <path d="M177.4-40.6c0,2.7,0,5.5.2,7.5h0c-.3-.8-1.1-2.4-6.7-13.2h-3.8v16.7h2.7v-5.7c0-3,0-5.9-.1-8h0c.3.7.9,1.9,6.8,13.7h3.6v-16.7h-2.7v5.7h0Z"></path>      <path d="M189.6-38.7c-.7-1.5-2.5-5-3.8-7.5h-3.3l5.4,9.8c.1.2.1.3.1.5v6.4h2.9v-6.5c0-.2,0-.3.1-.5l5.4-9.8h-3.1c-1.2,2.4-2.6,5.2-3.8,7.5h0Z"></path>    </g>  </g></svg></div>
+  <div class="cookie-url"><a href="https://www.roomzero.es/cookies.html" target="_blank">Política de cookies</a></div>
+  <div class="title-intro">Configuración de cookies</div>
+  <div class="intro">Utilizamos cookies de primera parte y de terceros para finalidades analíticas sobre el uso de la web, personalizar el contenido en base a tus preferencias, y publicidad personalizada en base a un perfil a partir de la recopilación de tus hábitos de navegación. Para más información puedes leer nuestra política de cookies. Puedes aceptar todas las cookies mediante el botón “Aceptar” o puedes configurar o rechazar su uso pulsando en “Configurar”. <a href="https://www.roomzero.es/CookiesPolicy/cookies_policy_ES.pdf" target="_blank">Política de cookies</a></div>
+  <div class="cookie-config">Configurar</div>
+  <div class="cookie-rechazar">Rechazar todo</div>
+  <div class="cookie-aceptar">Aceptar</div>
+  <div class="cookie-title-necesarias">Cookies técnicas esenciales</div>
+  <div class="cookie-cont-necesarias">Son necesarias para gestionar la navegación dentro de la web o para mantener al usuario conectado. No se pueden desactivar porque afectaría al funcionamiento de la web.</div>
+  <div class="cookie-title-person">Cookies de personalización</div>
+  <div class="cookie-cont-person">Necesarias para recordar determinadas preferencias del usuario. </div>
+  <div class="cookie-title-anali">Cookies analíticas</div>
+  <div class="cookie-cont-anali">Nos ayudan a nosotros y a terceros a recopilar información sobre el uso de la web, a efectos de realizar un análisis estadístico para poder mejorar la estructura y los contenidos.</div>
+  <div class="cookie-title-publi">Cookies publicitarias comportamentales</div>
+  <div class="cookie-cont-publi">Ayudan a recopilar los hábitos de navegación del usuario para crear un perfil de sus intereses y para mostrarle anuncios adaptados a los mismos.</div>
+  <div class="cookie-confirm-select">Confirmar selección</div>
+  <div class="cookie-rechazar-all">Rechazar todo</div>
+  <div class="cookie-confirm-all">Aceptar todo</div>
+ </div>
+<script>
+    window.g_cookies_content = {
+      logo: document.querySelector('.logo').innerHTML,
+      cookie_url: document.querySelector('.cookie-url').innerHTML,
+      title_intro: document.querySelector('.title-intro').innerHTML,
+      intro: document.querySelector('.intro').innerHTML,
+      cookie_config: document.querySelector('.cookie-config').innerHTML,
+      cookie_rechazar: document.querySelector('.cookie-rechazar').innerHTML,
+      cookie_aceptar: document.querySelector('.cookie-aceptar').innerHTML,
+      cookie_title_necesarias: document.querySelector('.cookie-title-necesarias').innerHTML,
+      cookie_cont_necesarias: document.querySelector('.cookie-cont-necesarias').innerHTML,
+      cookie_title_person: document.querySelector('.cookie-title-person').innerHTML,
+      cookie_cont_person: document.querySelector('.cookie-cont-person').innerHTML,
+      cookie_title_anali: document.querySelector('.cookie-title-anali').innerHTML,
+      cookie_cont_anali: document.querySelector('.cookie-cont-anali').innerHTML,
+      cookie_title_publi: document.querySelector('.cookie-title-publi').innerHTML,
+      cookie_cont_publi: document.querySelector('.cookie-cont-publi').innerHTML,
+      cookie_confirm_select: document.querySelector('.cookie-confirm-select').innerHTML,
+      cookie_rechazar_all: document.querySelector('.cookie-rechazar-all').innerHTML,
+      cookie_confirm_all: document.querySelector('.cookie-confirm-all').innerHTML,
+      cookie_aria_label_input: 'Mostrar panel de configuración de cookies'
+    };
+    function getCookie(name) {
+      let cookieArr = document.cookie.split(";");
+      for (let i = 0; i < cookieArr.length; i++) {
+        let cookie = cookieArr[i].trim();
+        if (cookie.startsWith(name + "=")) {
+          return true;
+        }
+      }
+      return false;
+    }
+  
+    let usuarioCookie = getCookie("controlCookies");
+  
+    if (!usuarioCookie) {
+      let link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './ja/globalCookies/style.css';
+      document.body.appendChild(link);
+      let script = document.createElement('script');
+      script.src = './ja/globalCookies/controlCookiesVanilla.js';
+      document.body.appendChild(script);
+    }
+  </script>
+
+ 
+
+
+<header>
+  <!-- NAV -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+<nav id="mainNav">
+  <a href="https://www.eurostarshotels.com/" class="nav-logo"><svg role="img" aria-label="Eurostars Hotel Company" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 253.8 63.5">  <g>    <g>      <path d="M10.9,32.1h16.9v-1.9H11.1v-13.7h13.1v-1.9h-13.1V2.1h16.7V.2H0c0,.3.1.6.4.8.2.2,1.4.8,1.8,1.4.2.2.6,1,.6,2h0v27.8h8.2Z"></path>      <path d="M45.5,32.3c7.8,0,12-4.4,12-11.5V.4h-2.3v19.9c0,4.7-1.9,8.8-7.5,8.8s-7.7-4.1-7.7-8.8V.4h-6.5v20.4c0,7.1,4.1,11.5,12,11.5h0Z"></path>      <path d="M79.4,17.3c4.6-1.1,7.6-3.7,7.6-8.1S81.6.4,74.1.4h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6ZM72.8,16h-2.2V2.3h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M123.3,16.2C123.3,6.4,117.1,0,107.7,0s-15.6,6.3-15.6,16.2,6.1,16.2,15.6,16.2,15.6-6.4,15.6-16.2ZM99.2,16.1c0-9,2.6-14.3,8.6-14.3s8.5,5.4,8.5,14.4-2.6,14.4-8.5,14.4-8.6-5-8.6-14.5Z"></path>      <path d="M147.9,23c0-11-14.5-9.9-14.5-16.6s2.4-4.5,5.2-4.5,5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4h0Z"></path>      <polygon points="172.8 .4 150.2 .4 150.2 2.3 158.4 2.3 158.4 31.9 165.1 31.9 165.1 2.3 172.8 2.3 172.8 .4"></polygon>      <path d="M182.8.4l-11.3,31.5h2.2l3.4-9.4h12.7l3,9.5h6.8L189.6.4h-6.8ZM177.8,20.6l6-16.8,5.4,16.8h-11.4Z"></path>      <path d="M228.2,9.2c0-6.1-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6c4.6-1.1,7.6-3.7,7.6-8.1ZM214.1,16h-2.2V2.3h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M239.3,6.4c0-3.1,2.4-4.5,5.2-4.5s5,.8,7,2.6l.9-.8C250.5,1.8,248.2,0,244.1,0,237.5,0,233.9,3.3,233.9,8.3c0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4c0-11-14.5-9.9-14.5-16.6h0Z"></path>      <polygon points="12.5 53.3 5.8 53.3 5.8 46.5 2.9 46.5 2.9 63.3 5.8 63.3 5.8 55.8 12.5 55.8 12.5 63.3 15.5 63.3 15.5 46.5 12.5 46.5 12.5 53.3"></polygon>      <path d="M26.7,46.3c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM26.6,61.1c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <polygon points="35.4 49 40.1 49 40.1 63.3 43.1 63.3 43.1 49 47.8 49 47.8 46.5 35.4 46.5 35.4 49"></polygon>      <polygon points="53.5 55.8 60.8 55.8 60.8 53.3 53.5 53.3 53.5 49 61.1 49 61.1 46.5 50.6 46.5 50.6 63.3 61.2 63.3 61.6 60.8 53.5 60.8 53.5 55.8"></polygon>      <polygon points="67.7 46.5 64.7 46.5 64.7 63.3 75 63.3 75.4 60.8 67.7 60.8 67.7 46.5"></polygon>      <path d="M89.4,61.1c-3.1,0-4.1-3-4.1-6.3s1.1-6.2,4-6.2,3.1,1.4,3.5,3h2.9c-.2-2.7-2-5.4-6.3-5.4s-7.2,3.9-7.2,8.6,1.9,8.7,7,8.7,6-2.6,6.5-5.4h-2.9c-.4,1.5-1.2,3-3.5,3Z"></path>      <path d="M106.1,46.3c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM106,61.1c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <path d="M125,59.4h0c-.5-2.5-2.3-8.6-3.6-12.9h-4.4v16.7h2.7v-6.2c0-2.9,0-6.5-.2-8.5h.1c.7,3.3,2.8,10.7,3.9,14.7h2.6c1.6-4.8,3.6-11.4,4.3-14.7h.1c0,1.8-.1,5.2-.1,8.1v6.5h2.9v-16.7h-4.3c-1.4,4.3-3.6,10.9-4,12.9h0Z"></path>      <path d="M143.8,46.5h-6v16.7h3v-6.7h2.7c3.6,0,6-1.7,6-5.2s-2.6-4.9-5.7-4.9h0ZM143.3,54.2h-2.6v-5.3h2.6c1.8,0,3.1.8,3.1,2.6s-1.2,2.7-3.2,2.7Z"></path>      <path d="M155,46.5c-.6,1.8-4.7,15.1-5.2,16.7h2.9l1.3-4.4h5.7l1.4,4.4h3.1l-5.5-16.7s-3.8,0-3.8,0ZM154.6,56.4c1-3.1,1.8-5.7,2.2-7.6h0c.4,1.5,1.1,3.9,2.3,7.6h-4.5,0Z"></path>      <path d="M177.4,52.2c0,2.7,0,5.5.2,7.5h0c-.3-.8-1.1-2.4-6.7-13.2h-3.8v16.7h2.7v-5.7c0-3,0-5.9-.1-8h0c.3.7.9,1.9,6.8,13.7h3.6v-16.7h-2.7v5.7h0Z"></path>      <path d="M189.6,54.1c-.7-1.5-2.5-5-3.8-7.5h-3.3l5.4,9.8c.1.2.1.3.1.5v6.4h2.9v-6.5c0-.2,0-.3.1-.5l5.4-9.8h-3.1c-1.2,2.4-2.6,5.2-3.8,7.5h0Z"></path>    </g>  </g>  <g>    <g>      <path d="M10.9-60.6h16.9v-1.9H11.1v-13.7h13.1v-1.9h-13.1v-12.6h16.7v-1.9H0c0,.3.1.6.4.8.2.2,1.4.8,1.8,1.4.2.2.6,1,.6,2h0v27.8h8.2Z"></path>      <path d="M45.5-60.4c7.8,0,12-4.4,12-11.5v-20.4h-2.3v19.9c0,4.7-1.9,8.8-7.5,8.8s-7.7-4.1-7.7-8.8v-19.9h-6.5v20.4c0,7.1,4.1,11.5,12,11.5h0Z"></path>      <path d="M79.4-75.4c4.6-1.1,7.6-3.7,7.6-8.1s-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6ZM72.8-76.7h-2.2v-13.8h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M123.3-76.5c0-9.8-6.2-16.2-15.6-16.2s-15.6,6.3-15.6,16.2,6.1,16.2,15.6,16.2,15.6-6.4,15.6-16.2ZM99.2-76.6c0-9,2.6-14.3,8.6-14.3s8.5,5.4,8.5,14.4-2.6,14.4-8.5,14.4-8.6-5-8.6-14.5Z"></path>      <path d="M147.9-69.7c0-11-14.5-9.9-14.5-16.6s2.4-4.5,5.2-4.5,5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4h0Z"></path>      <polygon points="172.8 -92.3 150.2 -92.3 150.2 -90.5 158.4 -90.5 158.4 -60.8 165.1 -60.8 165.1 -90.5 172.8 -90.5 172.8 -92.3"></polygon>      <path d="M182.8-92.3l-11.3,31.5h2.2l3.4-9.4h12.7l3,9.5h6.8l-10.1-31.5h-6.8ZM177.8-72.2l6-16.8,5.4,16.8h-11.4Z"></path>      <path d="M228.2-83.5c0-6.1-5.4-8.8-12.8-8.8h-10.2v31.5h6.7v-14h1.7l9.2,14h7.6l-9.7-14.6c4.6-1.1,7.6-3.7,7.6-8.1ZM214.1-76.7h-2.2v-13.8h2.3c4.5,0,7.2,2.5,7.2,7.1s-2.7,6.7-7.2,6.7h0Z"></path>      <path d="M239.3-86.3c0-3.1,2.4-4.5,5.2-4.5s5,.8,7,2.6l.9-.8c-1.9-1.9-4.2-3.7-8.3-3.7-6.6,0-10.2,3.3-10.2,8.3,0,10.1,14.5,8.9,14.5,16.9s-2.3,5.2-6.1,5.2-6.9-1.8-8.8-3.5l-.8.9c2.1,2.3,5.6,4.6,10.4,4.6s10.6-3.4,10.6-9.4c0-11-14.5-9.9-14.5-16.6h0Z"></path>      <polygon points="12.5 -39.5 5.8 -39.5 5.8 -46.2 2.9 -46.2 2.9 -29.5 5.8 -29.5 5.8 -37 12.5 -37 12.5 -29.5 15.5 -29.5 15.5 -46.2 12.5 -46.2 12.5 -39.5"></polygon>      <path d="M26.7-46.5c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM26.6-31.6c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <polygon points="35.4 -43.8 40.1 -43.8 40.1 -29.5 43.1 -29.5 43.1 -43.8 47.8 -43.8 47.8 -46.2 35.4 -46.2 35.4 -43.8"></polygon>      <polygon points="53.5 -37 60.8 -37 60.8 -39.5 53.5 -39.5 53.5 -43.8 61.1 -43.8 61.1 -46.2 50.6 -46.2 50.6 -29.5 61.2 -29.5 61.6 -31.9 53.5 -31.9 53.5 -37"></polygon>      <polygon points="67.7 -46.2 64.7 -46.2 64.7 -29.5 75 -29.5 75.4 -31.9 67.7 -31.9 67.7 -46.2"></polygon>      <path d="M89.4-31.6c-3.1,0-4.1-3-4.1-6.3s1.1-6.2,4-6.2,3.1,1.4,3.5,3h2.9c-.2-2.7-2-5.4-6.3-5.4s-7.2,3.9-7.2,8.6,1.9,8.7,7,8.7,6-2.6,6.5-5.4h-2.9c-.4,1.5-1.2,3-3.5,3Z"></path>      <path d="M106.1-46.5c-5.2,0-7.4,4.3-7.4,8.5s2.2,8.7,7.2,8.7,7.4-3.9,7.4-8.7-2.3-8.5-7.2-8.5ZM106-31.6c-2.9,0-4.3-2.8-4.3-6.3s1.3-6.1,4.3-6.1,4.3,2.8,4.3,6.1-1.2,6.3-4.3,6.3Z"></path>      <path d="M125-33.3h0c-.5-2.5-2.3-8.6-3.6-12.9h-4.4v16.7h2.7v-6.2c0-2.9,0-6.5-.2-8.5h.1c.7,3.3,2.8,10.7,3.9,14.7h2.6c1.6-4.8,3.6-11.4,4.3-14.7h.1c0,1.8-.1,5.2-.1,8.1v6.5h2.9v-16.7h-4.3c-1.4,4.3-3.6,10.9-4,12.9h0Z"></path>      <path d="M143.8-46.2h-6v16.7h3v-6.7h2.7c3.6,0,6-1.7,6-5.2s-2.6-4.9-5.7-4.9h0ZM143.3-38.6h-2.6v-5.3h2.6c1.8,0,3.1.8,3.1,2.6s-1.2,2.7-3.2,2.7Z"></path>      <path d="M155-46.2c-.6,1.8-4.7,15.1-5.2,16.7h2.9l1.3-4.4h5.7l1.4,4.4h3.1l-5.5-16.7s-3.8,0-3.8,0ZM154.6-36.3c1-3.1,1.8-5.7,2.2-7.6h0c.4,1.5,1.1,3.9,2.3,7.6h-4.5,0Z"></path>      <path d="M177.4-40.6c0,2.7,0,5.5.2,7.5h0c-.3-.8-1.1-2.4-6.7-13.2h-3.8v16.7h2.7v-5.7c0-3,0-5.9-.1-8h0c.3.7.9,1.9,6.8,13.7h3.6v-16.7h-2.7v5.7h0Z"></path>      <path d="M189.6-38.7c-.7-1.5-2.5-5-3.8-7.5h-3.3l5.4,9.8c.1.2.1.3.1.5v6.4h2.9v-6.5c0-.2,0-.3.1-.5l5.4-9.8h-3.1c-1.2,2.4-2.6,5.2-3.8,7.5h0Z"></path>    </g>  </g></svg></a>
+  <ul class="nav-links">
+    <li><a href="https://www.roomzero.es/">Home</a></li>
+    <li><a href="https://www.roomzero.es/eurostarscultura/exposiciones">Exposiciones</a></li>
+    <li><a href="https://www.roomzero.es/eurostarscultura/artinprogress">Art in progress</a></li>
+    <li><a href="https://www.roomzero.es/eurostarscultura/winebooks">Wine &amp; Books</a></li>
+    <li><a href="https://www.roomzero.es/eurostarscultura/premios">Premios</a></li>
+  </ul>
+  <div class="nav-burger" id="navBurger" role="button" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE DRAWER -->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true">
+</div>
+<script>
+((mn) => {
+    if (!mn) return false;
+    const mobileMenu = document.getElementById('navDrawer');
+    if (!mobileMenu) return false;
+    const asLi = mn.querySelectorAll('li a');
+    asLi.forEach(el => {
+        mobileMenu.appendChild(el.cloneNode(true)); 
+    });
+})(document.getElementById('mainNav'));
+</script>
+</header>
+
+
+<main>
+  <div id="event-landing">
+      <div class="exhibit">
+        <h1 class="exhibit-title">XIII Premio Eurostars Madrid Tower de Fotografía </h1>
+        <figure class="exhibit-hero">
+          <img src="https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Premio%20Eurostars%20Madrid%20Tower%20de%20Fotograf%C3%ADa.jpg" alt="">
+        </figure>
+        <div class="exhibit-body">
+          
+<span style="font-weight:bold;font-size: 1.5em;">Fachadas de Madrid</span>
+<br><br>
+Madrid es un mosaico de historias, estilos y épocas que se reflejan en sus fachadas. Desde la sobriedad de la arquitectura clásica hasta la modernidad de las corrientes contemporáneas, cada edificio cuenta un relato único que dialoga con la identidad cultural de la ciudad. En esta edición invitamos a los fotógrafos a explorar esa diversidad visual y a capturar los detalles que convierten cada edificio en un lienzo irrepetible.
+        </div>
+        <figure class="exhibit-figure">
+          <img src="https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/IMAGEN%20WEB%20563%20x%20496%20CON%20LOGO.jpg" alt="">
+        </figure>
+
+        <div class="exhibit-title">Nuestros concursos</div>
+        
+        <div class="swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+          <button class="slides-nav__prev swiper-button-disabled swiper-button-lock" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-13579d14ee0d2c101" aria-disabled="true">prev</button>
+          <button class="slides-nav__next swiper-button-disabled swiper-button-lock" disabled="" tabindex="-1" aria-label="Next slide" aria-controls="swiper-wrapper-13579d14ee0d2c101" aria-disabled="true">next</button>
+          <div class="swiper-wrapper" id="swiper-wrapper-13579d14ee0d2c101" aria-live="polite">
+            
+              <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" style="width: 286.286px; margin-right: 20px;">
+                <a href="https://www.roomzero.es/eurostarscultura/premios/eurostars-grand-marina-fotografia?id=114048" class="exhibit-related-slide">
+                  <figure class="exhibit-related-figure">
+                    <img src="https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Pantalla%20est%C3%A1tica%20direccional%20-%20Recepci%C3%B3n%20(1920x1080%20px)%20PORTADA%20VIDEO.jpg" alt="" loading="lazy">
+                  </figure>
+                    <h3 class="exhibit-title">XXIV Premio Eurostars Grand Marina de Fotografía</h3>
+                    <p class="exhibit-related-subtitle"></p>
+                </a>
+              </div>
+            
+              <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" style="width: 286.286px; margin-right: 20px;">
+                <a href="https://www.roomzero.es/eurostarscultura/premios/eurostars-hotel-company-valladolid-fotografia?id=114050" class="exhibit-related-slide">
+                  <figure class="exhibit-related-figure">
+                    <img src="https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/valladolid.jpg" alt="" loading="lazy">
+                  </figure>
+                    <h3 class="exhibit-title">Premio Eurostars Hotel Company de Fotografía de Valladolid </h3>
+                    <p class="exhibit-related-subtitle"></p>
+                </a>
+              </div>
+            
+              <div class="swiper-slide" role="group" aria-label="3 / 3" style="width: 286.286px; margin-right: 20px;">
+                <a href="https://www.roomzero.es/eurostarscultura/premios/tu-mirada-es-personal?id=114051" class="exhibit-related-slide">
+                  <figure class="exhibit-related-figure">
+                    <img src="https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Primer%20premio_1080_Ant%C3%B3nio%20Tedim.jpg" alt="" loading="lazy">
+                  </figure>
+                    <h3 class="exhibit-title">XXI Concurso de Fotografía Tu mirada es personal </h3>
+                    <p class="exhibit-related-subtitle"></p>
+                </a>
+              </div>
+            
+          </div>
+        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+      </div>
+    </div>
+
+  <script>
+window.json_exposiciones = [
+  {
+    id:`114048`,
+    title:`XXIV Premio Eurostars Grand Marina de Fotografía`,
+    subtitle:``,
+    img1:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Pantalla estática direccional - Recepción (1920x1080 px) PORTADA VIDEO.jpg`,
+    altimg1:``,
+    img2:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Premio Eurostars Grand Marina de Fotografía.jpg`,
+    altimg2:``,
+    description:`<span style="font-weight:bold;font-size: 1.5em;">Barcelona, Capital Mundial de la Arquitectura</span>
+<br><br>
+Invitamos a aficionados y profesionales a participar en el XXIV Premio Eurostars Grand Marina de Fotografía Josep Juanpere 2026, renombrado en honor al presidente histórico del jurado y autor del interiorismo del hotel. Los participantes deberán componer trípticos fotográficos inspirados en la temática “Barcelona, Capital Mundial de la Arquitectura”.
+<br><br>
+Este año 2026, Barcelona ha recibido el reconocimiento de la UNESCO como Capital Mundial de la Arquitectura. En este contexto, invitamos a los fotógrafos a homenajear la arquitectura barcelonesa a través de sus miradas. Se trata de mostrar la belleza y singularidad de su patrimonio arquitectónico histórico y contemporáneo, así como el papel del urbanismo como elemento modernizador de la Ciudad Condal.`,
+    link:`https://www.roomzero.es/eurostarscultura/premios/eurostars-grand-marina-fotografia`,
+    textLink:`Descubrir `,
+    titleSection:`Nuestros concursos`,
+  },
+  {
+    id:`114049`,
+    title:`XIII Premio Eurostars Madrid Tower de Fotografía`,
+    subtitle:``,
+    img1:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/IMAGEN WEB 563 x 496 CON LOGO.jpg`,
+    altimg1:``,
+    img2:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Premio Eurostars Madrid Tower de Fotografía.jpg`,
+    altimg2:``,
+    description:`
+<span style="font-weight:bold;font-size: 1.5em;">Fachadas de Madrid</span>
+<br><br>
+Madrid es un mosaico de historias, estilos y épocas que se reflejan en sus fachadas. Desde la sobriedad de la arquitectura clásica hasta la modernidad de las corrientes contemporáneas, cada edificio cuenta un relato único que dialoga con la identidad cultural de la ciudad. En esta edición invitamos a los fotógrafos a explorar esa diversidad visual y a capturar los detalles que convierten cada edificio en un lienzo irrepetible.`,
+    link:`https://www.roomzero.es/eurostarscultura/premios/eurostars-madrid-tower-fotografia`,
+    textLink:`Descubrir `,
+    titleSection:`Nuestros concursos`,
+  },
+  {
+    id:`114050`,
+    title:`Premio Eurostars Hotel Company de Fotografía de Valladolid `,
+    subtitle:``,
+    img1:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/valladolid.jpg`,
+    altimg1:``,
+    img2:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Premio Valladolid de Fotografía.jpg`,
+    altimg2:``,
+    description:`
+<span style="font-weight:bold;font-size: 1.5em;">Valladolid revelado</span>
+<br><br>
+¿Qué imágenes representan mejor Valladolid, tanto para sus habitantes como para quienes la descubren por primera vez? Esa es la pregunta que plantea este premio fotográfico, cuyo propósito es contribuir a la construcción de un relato visual de la ciudad. Para ello, invitamos a fotógrafos aficionados y profesionales a capturar imágenes que muestren la esencia de la capital castellanoleonesa.`,
+    link:`https://www.roomzero.es/eurostarscultura/premios/eurostars-hotel-company-valladolid-fotografia`,
+    textLink:`Descubrir `,
+    titleSection:`Nuestros concursos`,
+  },
+  {
+    id:`114051`,
+    title:`XXI Concurso de Fotografía Tu mirada es personal `,
+    subtitle:``,
+    img1:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/Primer premio_1080_António Tedim.jpg`,
+    altimg1:``,
+    img2:`https://images.booking-channel.com/templates/cadenas/microsite6/images/eurostarscultura/1500/tu mirada es personal.jpg`,
+    altimg2:``,
+    description:`<span style="font-weight:bold;font-size: 1.5em;">CONCURSO DE FOTOGRAFÍA PARA CLIENTES DE EUROSTARS HOTEL COMPANY</span>
+<br><br>
+¡PARTICIPA EN LA 21ª EDICIÓN!
+<br><br>
+Cada ciudad es distinta según quién la mira. En Eurostars Hotel Company queremos premiar tu
+mirada a partir de las fotografías que nos envíes de tu ciudad Eurostars.
+<br><br>
+¿A qué esperas?`,
+    link:`https://www.roomzero.es/eurostarscultura/premios/tu-mirada-es-personal`,
+    textLink:`Descubrir `,
+    titleSection:`Nuestros concursos`,
+  },
+  ]
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</main>
+  <!-- FOOTER -->
+<footer id="footer-ec">
+  <div class="footer-top">
+    <div>
+      <p class="footer-brand">Eurostars Hotel Company</p>
+      <div class="footer-social">
+        <a href="https://twitter.com/eurostars" class="social-btn" title="Twitter/X"><svg viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"></path></svg></a>
+        <a href="https://www.facebook.com/hoteleseurostars" class="social-btn" title="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        <a href="https://es.linkedin.com/company/eurostars-hotels" class="social-btn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg></a>
+        <a href="https://www.instagram.com/eurostarshotels/?hl=es" class="social-btn" title="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="0.5" fill="rgba(245,240,232,0.6)" stroke="none"></circle></svg></a>
+      </div>
+    </div>
+    <div>
+      <p class="footer-col-title">Programas</p>
+      <ul class="footer-links">
+        <li><a href="https://www.roomzero.es/eurostarscultura/exposiciones">Exposiciones</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/artinprogress">Art in progress</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/winebooks">Wine &amp; Books</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/premios">Premios</a></li>
+      </ul>
+    </div>
+        <div>
+      <p class="footer-col-title">Legal</p>
+      <ul class="footer-links">
+        <li><a href="https://www.roomzero.es/eurostarscultura/aviso-legal">Aviso legal</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/condiciones-generales">Condiciones generales</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/politica-cookies">Política de cookies</a></li>
+        <li><a href="https://www.roomzero.es/eurostarscultura/politica-privacidad">Protección de datos</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer-col-title">Contacto</p>
+      <ul class="footer-links">
+        <li><a href="tel:+34913342196">+34 913 342 196</a></li>
+        <li><a href="">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© Eurostars Hotel Company 2026. Todos los derechos reservados</span>
+    <span>Arte y Cultura</span>
+  </div>
+</footer>
+<script src="https://www.eurostarshotels.com/js/libraries/gsap/gsap.min.js"></script>
+<script src="https://www.eurostarshotels.com/js/libraries/gsap/ScrollTrigger.min.js"></script>
+<script>
+
+((g, hg) => {
+  if (!g || !hg || !hg.length) return;
+    const strip = g.querySelector('.horiz-gallery-strip');
+    if (!strip) return;
+    strip.innerHTML = '';
+    hg.forEach(project => {
+      const wrap = document.createElement('div');
+      wrap.className = 'project-wrap';
+      const img = document.createElement('img');
+      img.src = project.image;
+      img.alt = project.alt;
+      wrap.appendChild(img);
+      strip.appendChild(wrap);
+    });
+})(document.getElementById('hero-gallery'), window.heroGallery);
+
+gsap.registerPlugin(ScrollTrigger);
+
+const isMobile = () => window.matchMedia('(max-width: 1024px)').matches;
+
+/* ── CURSOR (desktop only) ── */
+const dot  = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mouseX = 0, mouseY = 0, ringX = 0, ringY = 0;
+
+if (!('ontouchstart' in window)) {
+  document.addEventListener('mousemove', e => {
+    mouseX = e.clientX; mouseY = e.clientY;
+    gsap.to(dot, { x: mouseX - 4, y: mouseY - 4, duration: 0.1, ease: 'power2.out', opacity: 1 });
+  });
+  (function animateRing() {
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    gsap.set(ring, { x: ringX, y: ringY, opacity: 1 });
+    requestAnimationFrame(animateRing);
+  })();
+  document.querySelectorAll('a, .section-card, .expo-item, .social-btn, .exhibit-related-slide, .section-card-cta').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      gsap.to(ring, { scale: 2.2, opacity: 0.5, duration: 0.3, ease: 'power2.out' });
+      gsap.to(dot,  { scale: 0, opacity: 0, duration: 0.3 });
+    });
+    el.addEventListener('mouseleave', () => {
+      gsap.to(ring, { scale: 1, opacity: 1, duration: 0.3, ease: 'power2.out' });
+      gsap.to(dot,  { scale: 1, opacity: 1, duration: 0.3 });
+    });
+  });
+}
+
+/* ── MOBILE MENU ── */
+const burger = document.getElementById('navBurger');
+const drawer = document.getElementById('navDrawer');
+const drawerLinks = drawer.querySelectorAll('a');
+let drawerOpen = false;
+
+function openDrawer() {
+  drawerOpen = true;
+  burger.classList.add('open');
+  drawer.classList.add('visible');
+  gsap.fromTo(drawer,
+    { yPercent: -100 },
+    { yPercent: 0, duration: 0.5, ease: 'power3.out' }
+  );
+  gsap.fromTo(drawerLinks,
+    { opacity: 0, y: 20 },
+    { opacity: 1, y: 0, stagger: 0.07, delay: 0.2, duration: 0.5, ease: 'power2.out' }
+  );
+}
+
+function closeDrawer() {
+  drawerOpen = false;
+  burger.classList.remove('open');
+  gsap.to(drawer, {
+    yPercent: -100, duration: 0.4, ease: 'power3.in',
+    onComplete: () => drawer.classList.remove('visible')
+  });
+}
+
+burger.addEventListener('click', () => {
+  drawerOpen ? closeDrawer() : openDrawer();
+});
+
+drawerLinks.forEach(link => {
+  link.addEventListener('click', closeDrawer);
+});
+
+/* ── PAGE LOAD ── */
+const tl = gsap.timeline({ defaults: { ease: 'power3.out' } });
+
+
+tl.from('.hero-h1 span',  { yPercent: 110, duration: 1.1, stagger: 0.12, ease: 'power4.out' }, 0.3);
+tl.from('.hero-eyebrow span', { yPercent: 100, duration: 0.8, ease: 'power3.out' }, 0.5);
+tl.to('.nav-logo', { opacity: 1, duration: 0.6 }, 0.8);
+tl.to('.nav-links a', { opacity: 1, duration: 0.5, stagger: 0.08 }, 0.9);
+if (isMobile()) {
+  gsap.set(drawerLinks, { opacity: 0 });
+  gsap.set(drawer, { yPercent: -100 });
+}
+/* ── PARALLAX (disabled on touch) ── */
+if (!('ontouchstart' in window)) {
+  gsap.utils.toArray('.mission-img img').forEach(img => {
+    gsap.to(img, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: img.parentElement, scrub: true } });
+  });
+}
+
+/* ── SCROLL ANIMATIONS ── */
+gsap.from('.mission-title span span', {
+  yPercent: 105, duration: 1, stagger: 0.1, ease: 'power4.out',
+  scrollTrigger: { trigger: '.mission', start: 'top 75%' }
+});
+
+gsap.from('.mission-body p', {
+  opacity: 0, y: 24, duration: 0.9, stagger: 0.15, ease: 'power2.out',
+  scrollTrigger: { trigger: '.mission-body', start: 'top 80%' }
+});
+
+gsap.from('.section-number span', {
+  yPercent: 100, duration: 0.8, ease: 'power3.out',
+  scrollTrigger: { trigger: '.mission-left', start: 'top 75%' }
+});
+
+gsap.utils.toArray('.mission-img').forEach((el, i) => {
+  gsap.from(el, { opacity: 0, y: 40, duration: 1.1, delay: i * 0.1, ease: 'power2.out',
+    scrollTrigger: { trigger: '.mission-right', start: 'top 70%' }
+  });
+});
+
+gsap.from('.section-card', {
+  opacity: 0, y: 60, duration: 1, stagger: 0.15, ease: 'power3.out',
+  scrollTrigger: { trigger: '#sectionsGrid', start: 'top 75%' }
+});
+
+gsap.from('.expo-title span span', {
+  yPercent: 105, duration: 1, stagger: 0.1, ease: 'power4.out',
+  scrollTrigger: { trigger: '.exposiciones', start: 'top 75%' }
+});
+
+gsap.utils.toArray('.expo-item').forEach((item, i) => {
+  gsap.from(item, { opacity: 0, x: isMobile() ? 0 : -30, y: isMobile() ? 20 : 0,
+    duration: 0.8, delay: i * 0.1, ease: 'power2.out',
+    scrollTrigger: { trigger: item, start: 'top 85%' }
+  });
+});
+
+gsap.from('.footer-top > div', {
+  opacity: 0, y: 30, duration: 0.9, stagger: 0.12, ease: 'power2.out',
+  scrollTrigger: { trigger: 'footer', start: 'top 80%' }
+});
+
+/* ── NAV SCROLL ── */
+ScrollTrigger.create({
+  start: 'top -90',
+  onEnter:     () => gsap.to('nav', { background: 'transparent', backdropFilter: 'blur(12px)',  padding: `0.85rem var(--px)`, duration: 0.4 }),
+  onLeaveBack: () => gsap.to('nav', { background: 'transparent',           backdropFilter: 'blur(0px)',   padding: `1.25rem var(--px)`, duration: 0.4 })
+});
+
+/* ── SCROLL LATERAL HERO IMGS ── */
+(function initHeroGallery() {
+  const strip = document.querySelector('#hero-gallery .horiz-gallery-strip');
+  if (!strip) return;
+
+const getX = () => {
+  const totalW = strip.scrollWidth;
+  const viewW  = window.innerWidth;
+  const firstWrap = strip.querySelector('.project-wrap');
+  const firstW = firstWrap.offsetWidth;
+  const padding = parseFloat(getComputedStyle(firstWrap).paddingLeft) + 
+                  parseFloat(getComputedStyle(firstWrap).paddingRight);
+  const imgW = firstW - padding;
+
+  // Offset real actual del strip
+  const currentX = gsap.getProperty(strip, 'x') || 0;
+  const stripRect = strip.getBoundingClientRect();
+  const naturalLeft = stripRect.left - currentX; // dónde estaría sin transform
+
+  const startX = (viewW - imgW) / 2 - naturalLeft;
+  const endX   = startX - (totalW - imgW - padding);
+
+  return { startX, travelX: endX - startX };
+};
+
+gsap.set(strip, { opacity: 0 });
+
+// Espera a que el DOM esté listo
+ScrollTrigger.refresh();
+  const { startX } = getX();
+  gsap.set(strip, { x: startX, transformOrigin: '0 0' , opacity: 1});
+
+  ScrollTrigger.create({
+    trigger:             '#hero-gallery',
+    start:               'top top',
+    end:                 () => `+=${Math.abs(getX().travelX)}`,
+    pin:                 true,
+    scrub:               1,
+    anticipatePin:       1,
+    invalidateOnRefresh: true,
+    onUpdate: (self) => {
+      const { startX, travelX } = getX();
+      gsap.set(strip, { x: startX + travelX * self.progress, transformOrigin: '0 0' });
+    }
+  });
+})();
+/* ── ── */
+//Lista de ofertas — añade el id al href de cada item
+((pl, data) => {
+  if (!pl || !data || data.length === 0 ) return;
+
+  function renderProgramLanding(items) {
+    return items.map(item => `
+      <div class="program-landing" id="program-landing-${item.id}">
+        <div class="program-landing-text">
+          <p class="program-landing-number">${item.pretitle || ''}</p>
+          <h2 class="program-landing-title">${item.title}</h2>
+          <p class="program-landing-desc">${item.subtitle}</p>
+          <a href="${item.link}?id=${item.id}" class="section-card-cta">
+            ${item.textLink} <span class="cta-arrow"></span>
+          </a>
+        </div>
+        <figure class="program-landing-figure">
+          <img class="program-landing-img" src="${item.img1}" alt="${item.altimg1}" loading="lazy"/>
+        </figure>
+      </div>
+    `).join('');
+  }
+
+  pl.innerHTML = renderProgramLanding(data);
+
+})(document.getElementById('program-landing-container'), window.json_exposiciones);
+
+//landing de detalle
+((evl, data) => {
+  if (!evl || data.length === 0) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const currentIndex = data.findIndex(d => d.id === id);
+
+  if (currentIndex === -1) return;
+
+  const currentItem = data[currentIndex];
+  const restItems = data.filter(d => d.id !== id);
+
+  function renderEventLanding(item) {
+    return `
+      <div class="exhibit">
+        <h1 class="exhibit-title">${item.title} ${item.subtitle}</h1>
+        <figure class="exhibit-hero">
+          <img src="${item.img2}" alt="${item.altimg2}" />
+        </figure>
+        <div class="exhibit-body">
+          ${item.description}
+        </div>
+        <figure class="exhibit-figure">
+          <img src="${item.img1}" alt="${item.altimg1}" />
+        </figure>
+
+        <div class="exhibit-title">${item.titleSection}</div>
+        
+        <div class="swiper">
+          <button class="slides-nav__prev">prev</button>
+          <button class="slides-nav__next">next</button>
+          <div class="swiper-wrapper">
+            ${restItems.map(item => `
+              <div class="swiper-slide">
+                <a href="${item.link}?id=${item.id}" class="exhibit-related-slide">
+                  <figure class="exhibit-related-figure">
+                    <img src="${item.img1}" alt="${item.altimg1}" loading="lazy"/>
+                  </figure>
+                    <h3 class="exhibit-title">${item.title}</h3>
+                    <p class="exhibit-related-subtitle">${item.subtitle}</p>
+                </a>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  evl.innerHTML = renderEventLanding(currentItem);
+  
+  var swiper = new Swiper(".swiper", {
+    grabCursor: true,
+    centeredSlides: false,
+    slidesPerView: 1.5,
+    spaceBetween: 20,
+    breakpoints: {
+      601: {
+        slidesPerView: 2.5,
+        spaceBetween: 30
+      },
+      1024: {
+        slidesPerView: 3.5,
+      }
+    },
+    speed: 1000,
+    freeMode: false,
+    on: {
+      click(event) {
+        swiper.slideTo(this.clickedIndex);
+      },
+    },
+    navigation: {
+      nextEl: '.slides-nav__next',
+      prevEl: '.slides-nav__prev',
+    },
+  });
+
+})(document.getElementById('event-landing'), window.json_exposiciones);
+
+((sections)=>{
+  if(!sections) return false;
+  if ('IntersectionObserver' in window) {
+    var reveal = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          reveal.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.18 });
+
+    sections.forEach(function (sec) {
+      sec.classList.add('reveal');
+      reveal.observe(sec);
+    });
+  }
+  /* Arte y Cultura · Eurostars — interacciones de la landing */
+
+  gsap.registerPlugin(ScrollTrigger);
+  let revealContainers = document.querySelectorAll(".program-landing-figure");
+
+  revealContainers.forEach((container) => {
+    let image = container.querySelector("img");
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        toggleActions: "restart none none reset"
+      }
+    });
+
+    tl.set(container, { autoAlpha: 1 });
+    tl.from(container, 1.5, {
+      xPercent: -100,
+      ease: Power2.out
+    });
+    tl.from(image, 1.5, {
+      xPercent: 100,
+      scale: 1.3,
+      delay: -1.5,
+      ease: Power2.out
+    });
+  });
+
+})(Array.prototype.slice.call(document.querySelectorAll('.program-landing')));
+
+</script>
+
+
+
+</body></html>
