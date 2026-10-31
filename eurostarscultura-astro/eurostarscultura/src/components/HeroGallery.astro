@@ -1,0 +1,14 @@
+---
+const { items } = Astro.props;
+---
+<section id="hero-gallery">
+  <div class="hero-content">
+    <div class="horiz-gallery-wrapper">
+      <div class="horiz-gallery-strip">
+        {items.map((p) => (
+          <div class="project-wrap"><img src={p.image} alt={p.alt} /></div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>

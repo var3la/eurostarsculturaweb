@@ -1,0 +1,20 @@
+---
+import Logo from './Logo.astro';
+import { navLinks } from '../data/home.js';
+---
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<nav id="mainNav">
+  <a href="https://www.eurostarshotels.com/" class="nav-logo"><Logo /></a>
+  <ul class="nav-links">
+    {navLinks.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+  </ul>
+  <button class="nav-burger" id="navBurger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="navDrawer">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true">
+  {navLinks.map((l) => <a href={l.href}>{l.label}</a>)}
+</div>

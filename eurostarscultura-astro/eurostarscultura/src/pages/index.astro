@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroGallery from '../components/HeroGallery.astro';
+import Mission from '../components/Mission.astro';
+import ProgramCards from '../components/ProgramCards.astro';
+import ExpoList from '../components/ExpoList.astro';
+import { heroGallery, mission, programCards } from '../data/home.js';
+import { getExposiciones, getWineBooks } from '../lib/content.js';
+
+const [exposiciones, wineBooks] = await Promise.all([getExposiciones(), getWineBooks()]);
+---
+<Layout title="Eurostars Arte y Cultura" description="Proyecto cultural de Eurostars Hotel Company: exposiciones, Art in Progress, Wine & Books y premios.">
+  <div class="hero-title-block">
+    <p class="hero-eyebrow"><span></span></p>
+    <h1 class="hero-h1">
+      <span>Arte</span>
+      <span>y <em>Cultura</em></span>
+      <span>Eurostars Hotel Company</span>
+    </h1>
+  </div>
+
+  <HeroGallery items={heroGallery} />
+  <Mission {...mission} />
+  <ProgramCards cards={programCards} />
+
+  <ExpoList id="exposiciones" titleLines={['Exposiciones', 'actuales en nuestros hoteles']} items={exposiciones} />
+  <ExpoList id="winebooks" titleLines={['Wine & Books', 'Catas literarias']} items={wineBooks} />
+</Layout>

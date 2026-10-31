@@ -1,0 +1,25 @@
+---
+// Enlace "estirado" (.expo-link::after) en vez de <a> envolviendo <li>, que es HTML inválido.
+const { id, titleLines, items } = Astro.props;
+---
+<section class="exposiciones" id={id}>
+  <div class="expo-header">
+    <h2 class="expo-title">
+      {titleLines.map((t) => <span class="reveal-line"><span>{t}</span></span>)}
+    </h2>
+  </div>
+  <ul class="expo-list">
+    {items.map((i) => (
+      <li class="expo-item">
+        <span class="expo-idx"></span>
+        <div>
+          <p class="expo-info-title"><a class="expo-link" href={i.href}>{i.heading}</a></p>
+          {i.meta && <p class="expo-info-meta">{i.meta}</p>}
+        </div>
+        <div class="expo-arrow" aria-hidden="true">
+          <svg viewBox="0 0 12 12" stroke="var(--muted)" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h8M7 3l3 3-3 3"></path></svg>
+        </div>
+      </li>
+    ))}
+  </ul>
+</section>

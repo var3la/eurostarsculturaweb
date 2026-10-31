@@ -1,0 +1,37 @@
+---
+import Logo from './Logo.astro';
+---
+<div style="display:none"><div class="logo"><Logo /></div></div>
+<script is:inline>
+  window.g_cookies_content = {
+    logo: document.querySelector('.logo').innerHTML,
+    cookie_url: '<a href="/cookies.html" target="_blank">Política de cookies</a>',
+    title_intro: 'Configuración de cookies',
+    intro: 'Utilizamos cookies de primera parte y de terceros para finalidades analíticas sobre el uso de la web, personalizar el contenido en base a tus preferencias, y publicidad personalizada en base a un perfil a partir de la recopilación de tus hábitos de navegación. Para más información puedes leer nuestra política de cookies. Puedes aceptar todas las cookies mediante el botón “Aceptar” o puedes configurar o rechazar su uso pulsando en “Configurar”. <a href="https://images.booking-channel.com/CookiesPolicy/cookies_policy_ES.pdf" target="_blank">Política de cookies</a>',
+    cookie_config: 'Configurar',
+    cookie_rechazar: 'Rechazar todo',
+    cookie_aceptar: 'Aceptar',
+    cookie_title_necesarias: 'Cookies técnicas esenciales',
+    cookie_cont_necesarias: 'Son necesarias para gestionar la navegación dentro de la web o para mantener al usuario conectado. No se pueden desactivar porque afectaría al funcionamiento de la web.',
+    cookie_title_person: 'Cookies de personalización',
+    cookie_cont_person: 'Necesarias para recordar determinadas preferencias del usuario. ',
+    cookie_title_anali: 'Cookies analíticas',
+    cookie_cont_anali: 'Nos ayudan a nosotros y a terceros a recopilar información sobre el uso de la web, a efectos de realizar un análisis estadístico para poder mejorar la estructura y los contenidos.',
+    cookie_title_publi: 'Cookies publicitarias comportamentales',
+    cookie_cont_publi: 'Ayudan a recopilar los hábitos de navegación del usuario para crear un perfil de sus intereses y para mostrarle anuncios adaptados a los mismos.',
+    cookie_confirm_select: 'Confirmar selección',
+    cookie_rechazar_all: 'Rechazar todo',
+    cookie_confirm_all: 'Aceptar todo',
+    cookie_aria_label_input: 'Mostrar panel de configuración de cookies'
+  };
+
+  if (!document.cookie.split(';').some((c) => c.trim().startsWith('controlCookies='))) {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://images.booking-channel.com/ja/globalCookies/style.css';
+    document.body.appendChild(link);
+    const script = document.createElement('script');
+    script.src = 'https://images.booking-channel.com/ja/globalCookies/controlCookiesVanilla.js';
+    document.body.appendChild(script);
+  }
+</script>

@@ -1,0 +1,20 @@
+---
+const { cards } = Astro.props;
+---
+<div class="sections-intro">
+  <span class="sections-intro-label">Nuestros programas</span>
+  <div class="sections-intro-line"></div>
+</div>
+<div class="sections-grid" id="sectionsGrid">
+  {cards.map((c) => (
+    <div class="section-card">
+      <div class="section-card-img"><img src={c.img} alt="" loading="lazy" /></div>
+      <div class="section-card-body">
+        <p class="section-card-number">{c.label}</p>
+        <h3 class="section-card-title">{c.title}</h3>
+        <p class="section-card-desc">{c.desc}</p>
+        <a href={c.href} class="section-card-cta">{c.cta} <span class="cta-arrow"></span></a>
+      </div>
+    </div>
+  ))}
+</div>
